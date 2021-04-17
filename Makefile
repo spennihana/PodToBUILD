@@ -8,7 +8,7 @@ build:
 	@ditto bazel-bin/RepoTools bin/RepoTools
 	@ditto bazel-bin/Compiler bin/Compiler
 
-
+# a comment
 # There are a few issues with SwiftPackageManager and incremental builds
 clean:
 	rm -rf .build

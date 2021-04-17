@@ -45,7 +45,8 @@ public struct GlobNode: SkylarkConvertible {
         ]
 
         // If there's no excludes omit the argument
-        let excludeArgs: [SkylarkFunctionArgument] = exclude.isEmpty ? [] : [
+        // let excludeArgs: [SkylarkFunctionArgument] = exclude.isEmpty ? [] : [
+        let excludeArgs: [SkylarkFunctionArgument] = [
             .named(name: "exclude", value: exclude.reduce(SkylarkNode.empty) {
                 $0 .+. $1.toSkylark()
             }),
